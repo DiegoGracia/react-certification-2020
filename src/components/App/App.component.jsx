@@ -1,20 +1,17 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-
-/*import AuthProvider from '../../providers/Auth';
-import HomePage from '../../pages/Home';
-import LoginPage from '../../pages/Login';
-import NotFound from '../../pages/NotFound';
-import SecretPage from '../../pages/Secret';
-import Private from '../Private';
-import Fortune from '../Fortune';
-import Layout from '../Layout';
-import { random } from '../../utils/fns';*/
+import HomeView from '../../pages/HomeView/HomeView';
 
 function App() {
 
-  return(
-    <h1>estoy vivo</h1>
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <HomeView />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 export default App;
